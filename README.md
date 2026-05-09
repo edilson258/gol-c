@@ -45,11 +45,9 @@ Open `http://localhost:8080` in your browser.
 
 ## Controls
 
-| Input | Action |
-|-------|--------|
-| Left Click | Set cell alive |
-| Escape | Quit (native only) |
-| Window Resize | Grid adapts automatically |
+- **Left Click** — Set cell alive
+- **Escape** — Quit (native only)
+- **Window Resize** — Grid adapts automatically
 
 ## Performance
 
