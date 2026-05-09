@@ -2,6 +2,8 @@
 
 A high-performance implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in **C++20** with **SDL2** rendering. Compiles natively and to **WebAssembly** for the browser.
 
+![Game of Life](assets/example.gif)
+
 ## Features
 
 - Zero runtime allocations with fixed-size padded buffers and pointer-swap double buffering
