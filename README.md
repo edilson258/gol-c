@@ -51,18 +51,15 @@ Open `http://localhost:8080` in your browser.
 | Escape | Quit (native only) |
 | Window Resize | Grid adapts automatically |
 
-
 ## Performance
 
-| Technique | Detail |
-|-----------|--------|
-| Data layout | Flat `uint8_t` array, cache-line aligned (`alignas(64)`) |
-| Buffering | Double-buffered pointer swap, zero copies per generation |
-| Bounds checking | Eliminated via 1-cell padding border |
-| Neighbor counting | Fully unrolled 8-neighbor sum |
-| GoL rules | Branchless: `(alive == 3) \| ((alive == 2) & cell)` |
-| Rendering | Batched `SDL_RenderFillRects`, one draw call per frame |
-| Compiler | `-O3 -march=native -flto -funroll-loops` |
+- **Data layout** — Flat `uint8_t` array, cache-line aligned (`alignas(64)`)
+- **Buffering** — Double-buffered pointer swap, zero copies per generation
+- **Bounds checking** — Eliminated via 1-cell padding border
+- **Neighbor counting** — Fully unrolled 8-neighbor sum
+- **GoL rules** — Branchless: `(alive == 3) | ((alive == 2) & cell)`
+- **Rendering** — Batched `SDL_RenderFillRects`, one draw call per frame
+- **Compiler** — `-O3 -march=native -flto -funroll-loops`
 
 ## License
 
