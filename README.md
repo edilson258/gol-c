@@ -60,7 +60,3 @@ Open `http://localhost:8080` in your browser.
 - **GoL rules** — Branchless: `(alive == 3) | ((alive == 2) & cell)`
 - **Rendering** — Batched `SDL_RenderFillRects`, one draw call per frame
 - **Compiler** — `-O3 -march=native -flto -funroll-loops`
-
-## License
-
-MIT
