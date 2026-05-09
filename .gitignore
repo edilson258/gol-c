@@ -1,0 +1,21 @@
+# Build
+build/
+build-wasm/
+
+# Emscripten SDK
+emsdk/
+
+# WASM build output
+web/gol.js
+web/gol.wasm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
