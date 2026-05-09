@@ -32,18 +32,49 @@
         border: 1px solid #333;
         border-radius: 4px;
       }
-      .info {
+      .controls {
         margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .info {
         font-size: 0.8rem;
         color: #666;
+      }
+      .btn-fullscreen {
+        background: none;
+        border: 1px solid #4fc3f7;
+        color: #4fc3f7;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .btn-fullscreen:hover {
+        background: #4fc3f7;
+        color: #0a0a0a;
       }
     </style>
   </head>
   <body>
     <h1>Conway's Game of Life</h1>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-    <p class="info">Click to add cells · Powered by C++ &amp; WebAssembly</p>
+    <div class="controls">
+      <p class="info">Click to add cells · Powered by C++ &amp; WebAssembly</p>
+      <button class="btn-fullscreen" onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
     <script>
+      function toggleFullscreen() {
+        var canvas = document.getElementById("canvas");
+        if (!document.fullscreenElement) {
+          canvas.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      }
+
       var Module = {
         canvas: document.getElementById("canvas"),
       };

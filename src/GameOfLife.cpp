@@ -95,7 +95,7 @@ int GameOfLife::CreateSDLWindow()
                                    SDL_WINDOWPOS_CENTERED,
                                    m_SDLWindowWidth,
                                    m_SDLWindowHeight,
-                                   0);
+                                   SDL_WINDOW_RESIZABLE);
 
     if (!m_SDLWindow)
     {

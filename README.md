@@ -51,18 +51,6 @@ Open `http://localhost:8080` in your browser.
 | Escape | Quit (native only) |
 | Window Resize | Grid adapts automatically |
 
-## Project Structure
-
-```
-src/
-├── GameOfLifeBoard.hpp
-├── GameOfLifeBoard.cpp
-├── GameOfLife.hpp
-├── GameOfLife.cpp
-└── main.cpp
-web/
-└── index.html
-```
 
 ## Performance
 
